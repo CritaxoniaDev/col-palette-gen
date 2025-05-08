@@ -1,0 +1,23 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+    <!-- Color wheel background -->
+    <circle cx="60" cy="60" r="50" fill="#f8f9fa" class="dark:fill-gray-800" />
+
+    <!-- Color palette elements -->
+    <g class="palette-elements">
+      <!-- Color swatches that rotate on hover -->
+      <rect x="30" y="35" width="25" height="25" rx="4" fill="#FF595E" transform-origin="60 60"
+        class="swatch swatch-1" />
+      <rect x="65" y="35" width="25" height="25" rx="4" fill="#FFCA3A" transform-origin="60 60"
+        class="swatch swatch-2" />
+      <rect x="30" y="65" width="25" height="25" rx="4" fill="#8AC926" transform-origin="60 60"
+        class="swatch swatch-3" />
+      <rect x="65" y="65" width="25" height="25" rx="4" fill="#1982C4" transform-origin="60 60"
+        class="swatch swatch-4" />
+
+      <!-- Center circle -->
+      <circle cx="60" cy="60" r="12" fill="#6A4C93" class="center-circle" />
+
+      <!-- Paintbrush handle -->
+      <rect x="57" y="75" width="6" height="25" rx="2" fill="#4A4A4A" class="dark:fill-gray-300" />
+    </g>
+  </svg>
