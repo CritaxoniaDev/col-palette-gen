@@ -1,33 +1,5 @@
 <template>
-  <div class="color-generator max-w-6xl mx-auto" tabindex="0" @keydown.space.prevent="generatePalette" ref="generator">
-    <!-- Logo -->
-    <div class="flex justify-center mb-8">
-      <div class="logo-container">
-        <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
-          <!-- Color wheel background -->
-          <circle cx="60" cy="60" r="50" fill="#f8f9fa" class="dark:fill-gray-800" />
-
-          <!-- Color palette elements -->
-          <g class="palette-elements">
-            <!-- Color swatches that rotate on hover -->
-            <rect x="30" y="35" width="25" height="25" rx="4" fill="#FF595E" transform-origin="60 60"
-              class="swatch swatch-1" />
-            <rect x="65" y="35" width="25" height="25" rx="4" fill="#FFCA3A" transform-origin="60 60"
-              class="swatch swatch-2" />
-            <rect x="30" y="65" width="25" height="25" rx="4" fill="#8AC926" transform-origin="60 60"
-              class="swatch swatch-3" />
-            <rect x="65" y="65" width="25" height="25" rx="4" fill="#1982C4" transform-origin="60 60"
-              class="swatch swatch-4" />
-
-            <!-- Center circle -->
-            <circle cx="60" cy="60" r="12" fill="#6A4C93" class="center-circle" />
-
-            <!-- Paintbrush handle -->
-            <rect x="57" y="75" width="6" height="25" rx="2" fill="#4A4A4A" class="dark:fill-gray-300" />
-          </g>
-        </svg>
-      </div>
-    </div>
+  <div class="color-generator max-w-6xl mx-auto pt-10" tabindex="0" @keydown.space.prevent="generatePalette" ref="generator">
     <!-- Color Palette Display -->
     <div class="mb-12">
       <!-- Main Palette - Side by side with no gaps -->
@@ -116,7 +88,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Recommendation 1 -->
         <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-          <div class="flex h-16">
+          <div class="flex h-60">
             <div v-for="(color, index) in recommendedPalettes[0]" :key="'rec1-' + index" class="flex-1 h-full"
               :style="{ backgroundColor: color }" @click="copyToClipboard(color)" title="Click to copy"></div>
           </div>
@@ -128,7 +100,7 @@
 
         <!-- Recommendation 2 -->
         <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-          <div class="flex h-16">
+          <div class="flex h-60">
             <div v-for="(color, index) in recommendedPalettes[1]" :key="'rec2-' + index" class="flex-1 h-full"
               :style="{ backgroundColor: color }" @click="copyToClipboard(color)" title="Click to copy"></div>
           </div>
@@ -140,7 +112,7 @@
 
         <!-- Recommendation 3 -->
         <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-          <div class="flex h-16">
+          <div class="flex h-60">
             <div v-for="(color, index) in recommendedPalettes[2]" :key="'rec3-' + index" class="flex-1 h-full"
               :style="{ backgroundColor: color }" @click="copyToClipboard(color)" title="Click to copy"></div>
           </div>
@@ -152,7 +124,7 @@
 
         <!-- Recommendation 4 -->
         <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-          <div class="flex h-16">
+          <div class="flex h-60">
             <div v-for="(color, index) in recommendedPalettes[3]" :key="'rec4-' + index" class="flex-1 h-full"
               :style="{ backgroundColor: color }" @click="copyToClipboard(color)" title="Click to copy"></div>
           </div>
